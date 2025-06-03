@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Day Planner</title>
+  
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css">
+  </head>
+</html>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Day Planner</h1>
+      <div class="date-picker">
+        <input type="date" id="taskDate" />
+      </div>
+    </header>
+
+    <div class="add-task">
+      <input type="time" id="taskTime" />
+      <input type="text" id="taskText" placeholder="Enter your task..." />
+      <button id="addTaskBtn">Add Task</button>
+    </div>
+
+    <div class="tasks" id="taskList">
+   
+    </div>
+  </div>
+    <script src="script.js"></script>
+</body>

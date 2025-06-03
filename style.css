@@ -1,0 +1,146 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Inter', sans-serif;
+}
+
+title body {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+    padding: 2rem;
+}
+
+.container {
+    background: #fff;
+    width: 100%;
+    max-width: 640px;
+    border-radius: 1.5rem;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    padding: 2rem 2.5rem 3rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+header {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    text-align: center;
+}
+
+header h1 {
+    font-size: 1.875rem;
+    font-weight: 700;
+    color: #333;
+}
+
+header .date-picker {
+    display: flex;
+    justify-content: center;
+    gap: 0.5rem;
+}
+
+input[type="date"],
+input[type="time"],
+input[type="text"] {
+    padding: 0.55rem 0.75rem;
+    border: 1px solid #e0e0e0;
+    border-radius: 0.75rem;
+    font-size: 0.95rem;
+    outline: none;
+    transition: border 0.2s;
+}
+
+input[type="date"]:focus,
+input[type="time"]:focus,
+input[type="text"]:focus {
+    border-color: #6c63ff;
+}
+
+.add-task {
+    display: grid;
+    grid-template-columns: 1fr 3fr auto;
+    gap: 0.75rem;
+}
+
+button {
+    background: #045dc8;
+    color: #fff;
+    border: none;
+    padding: 0.6rem 1rem;
+    font-size: 0.9rem;
+    font-weight: 600;
+    border-radius: 0.75rem;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+button:hover {
+    background: #325524;
+}
+
+.tasks {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    max-height: 400px;
+    overflow-y: auto;
+    padding-right: 0.25rem;
+}
+
+.task-item {
+    display: grid;
+    grid-template-columns: 80px 1fr auto;
+    align-items: center;
+    background: #fafafa;
+    border: 1px solid #f0f0f0;
+    border-radius: 0.75rem;
+    padding: 0.75rem 1rem;
+    gap: 0.75rem;
+    transition: transform 0.2s;
+}
+
+.task-item:hover {
+    transform: translateY(-2px);
+}
+
+.task-time {
+    font-weight: 600;
+    color: #1308e1;
+}
+
+.task-text {
+    color: #333;
+    word-wrap: break-word;
+}
+
+.delete-btn {
+    background: #045dc8;
+    padding: 0.4rem 0.7rem;
+    border-radius: 0.5rem;
+    font-size: 0.8rem;
+}
+
+.delete-btn:hover {
+    background: #de1515;
+}
+
+@media (max-width: 500px) {
+    .add-task {
+        grid-template-columns: 1fr;
+    }
+
+    .add-task input[type="time"],
+    .add-task input[type="text"] {
+        width: 100%;
+    }
+
+    .task-item {
+        grid-template-columns: 60px 1fr auto;
+    }
+}
